@@ -27,8 +27,8 @@ public class Sunshine
     public static void main(String[] args)
     {
         Scanner scanner=new Scanner(System.in);
-        ArrayList<Vendor> vendors=new ArrayList<>();
-        ArrayList<Customer> customers=new ArrayList<>();
+        ArrayList<Order> vendors=new ArrayList<>();
+        ArrayList<Order> customers=new ArrayList<>();
         int option1=0,option2=0;
         do {
             System.out.println("\n\t\t SunShine Mart ");
@@ -57,8 +57,8 @@ public class Sunshine
                                 String option3="";
                                 do {
                                     System.out.println("\t\t Entry ");
-                                    Vendor vendor=new Vendor();
-                                    vendor.setVendor();
+                                    Order vendor=new Order();
+                                    vendor.setOrder("Vendor");
                                     vendors.add(vendor);
                                     System.out.println("Do you want to add another Bill ?(Y/N):");
                                     option3=scanner.next();
@@ -67,9 +67,9 @@ public class Sunshine
                                 break;
                             case 2:
                                 System.out.println("\t\t\t View ");
-                                for(Vendor vendor:vendors)
+                                for(Order vendor:vendors)
                                 {
-                                    vendor.getVendor();
+                                    vendor.getOrder("Vendor");
                                     System.out.println("-------------------------------------");
                                 }
                                 break;
@@ -100,8 +100,8 @@ public class Sunshine
                                 String option3="";
                                 do {
                                     System.out.println("\t\t Entry ");
-                                    Customer customer=new Customer();
-                                    customer.setCustomer();
+                                    Order customer=new Order();
+                                    customer.setOrder("Customer");
                                     customers.add(customer);
                                     System.out.println("Do you want to add another Bill ?(Y/N):");
                                     option3=scanner.next();
@@ -110,9 +110,9 @@ public class Sunshine
                                 break;
                             case 2:
                                 System.out.println("\t\t\t View ");
-                                for(Customer customer:customers)
+                                for(Order customer:customers)
                                 {
-                                    customer.getCustomer();
+                                    customer.getOrder("Customer");
                                     System.out.println("-------------------------------------");
                                 }
                                 break;
